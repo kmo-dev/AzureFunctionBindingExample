@@ -47,7 +47,7 @@ namespace AzureFunctionBindingExample
         {
             try
             {
-                _logger.LogTrace("Processing request at {time}", DateTime.UtcNow);
+                _logger.LogInformation("Processing request at {time}", DateTime.UtcNow);
 
                 var data = new ExampleData
                 {
