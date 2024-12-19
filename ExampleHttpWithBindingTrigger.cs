@@ -6,6 +6,7 @@ using System.Text.Json;
 
 namespace AzureFunctionBindingExample
 {
+
     public class ExampleData
     {
         public string id { get; set; } = Guid.NewGuid().ToString();
@@ -30,6 +31,7 @@ namespace AzureFunctionBindingExample
         public HttpResponseData HttpResponse { get; set; }
     }
 
+
     public class ExampleHttpWithBindingTrigger
     {
         private readonly ILogger<ExampleHttpWithBindingTrigger> _logger;
@@ -45,7 +47,7 @@ namespace AzureFunctionBindingExample
         {
             try
             {
-                _logger.LogInformation("Processing request at {time}", DateTime.UtcNow);
+                _logger.LogTrace("Processing request at {time}", DateTime.UtcNow);
 
                 var data = new ExampleData
                 {
