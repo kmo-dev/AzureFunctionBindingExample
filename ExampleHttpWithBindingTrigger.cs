@@ -41,7 +41,7 @@ namespace AzureFunctionBindingExample
 
         [Function("ExampleHttpWithBindingTrigger")]
         public async Task<MultiOutput> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequestData req)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req)
         {
             try
             {
